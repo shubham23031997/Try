@@ -1,0 +1,20 @@
+server:
+  port: 8761
+  ssl:
+    enabled: true
+    key-store: classpath:keystore1.p12
+    key-store-password: springboot
+    key-store-type: PKCS12
+    key-alias: eserver
+    trust-store: classpath:keystore1.p12
+    trust-store-type: PKCS12
+    trust-store-password: springboot
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
+    instance:
+      hostname: localhost
